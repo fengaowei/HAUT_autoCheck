@@ -6,8 +6,7 @@ on:
   pull_request:
     branches: [ master ]
   schedule:
-    - cron: 0 5 * * * 
-    - cron: 30 13,22 * * *
+    - cron: 0 4 * * * 
 jobs:
   build:
     
@@ -24,7 +23,7 @@ jobs:
     - name: requirements
       run: |
         pip3 install -r requirements.txt
-  
+
     - name: Run
       run: |
         python3 main.py <<EOF
